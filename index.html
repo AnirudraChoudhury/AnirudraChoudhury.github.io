@@ -29,7 +29,7 @@
 
 </head>
 
-<body>
+<body ng-app="myApp">
 
   <!-- ======= Mobile nav toggle button ======= -->
   <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
@@ -83,7 +83,7 @@
         <div class="section-title">
           <h2>About</h2>
           <p>
-            . I have driven by my passion to speed up design and development process by using latest technology to allow us to spend more time in innovative ideas.
+            I have driven by my passion to speed up design and development process by using latest technology to allow us to spend more time in innovative ideas.
           </p>
 
         </div>
@@ -673,7 +673,7 @@
 
         <div class="row" data-aos="fade-in">
 
-          <!-- <div class="col-lg-5 d-flex align-items-stretch"> -->
+          <div class="col-lg-7 d-flex align-items-stretch">
             <div class="info">
               <div class="address">
                 <i class="icofont-google-map"></i>
@@ -697,7 +697,16 @@
 
             </div>
 
-          <!-- </div> -->
+          </div>
+          <div class="col-lg-5" ng-controller="myCtrl">
+            <h2>Please Share your Idea With us:</h2>
+            <label for="name">Your Name</label>
+            <input type="text" name="name" class="form-control" id="name" ng-model="name"/>
+            <label for="name">Your Massege</label>
+            <input type="text" name="msg" class="form-control" id="msg"  ng-model="msg"/>
+            <div class="text-center"><button type="submit" ng-click="sendMsg()">Send Message</button></div>
+            <div class="success">{{nmsg}}</div>
+        </div>
 <!-- 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
             <form action="forms/contact.php" method="get" role="form" class="php-email-form">
@@ -751,6 +760,7 @@
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
   <!-- Vendor JS Files -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
@@ -765,6 +775,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/Telmsg.js"></script>
 
 </body>
 
